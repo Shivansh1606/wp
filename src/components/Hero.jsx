@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Animated Background with correct path */}
       <motion.div 
         className="hero-background"
-        initial={{ scale: 1.2, opacity: 0 }}
+        initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         style={{
@@ -70,33 +70,6 @@ const Hero = () => {
               Get Quote →
             </motion.button>
           </Link>
-        </motion.div>
-
-        {/* Floating Feature Cards */}
-        <motion.div 
-          className="hero-features"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          {[
-            { icon: "⚡", text: "Smart Automation" },
-            { icon: "🌊", text: "Premium Quality" },
-            { icon: "🔧", text: "Expert Support" }
-          ].map((feature, index) => (
-            <motion.div 
-              key={index}
-              className="feature-card"
-              whileHover={{ 
-                y: -10, 
-                boxShadow: "0 15px 40px rgba(0,0,0,0.2)" 
-              }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <span className="feature-icon">{feature.icon}</span>
-              <p>{feature.text}</p>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
 
